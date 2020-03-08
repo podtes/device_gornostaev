@@ -1,25 +1,28 @@
 .intro-header-wrapper {
   background-color: #1c2a32;
   color: #ffffff;
-  background-image: url("../img/top-pic@1x.png"),
-    url("../img/bg-top@1x.png");
-  background-repeat: no-repeat,
-    no-repeat;
-  background-position: 1030px 53%,
-    0 0;
-  background-size: 713px 655px,
-    cover;
+  background-image: url("../img/bg-top@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/top-pic@2x.png"),
-    url("../img/bg-top@2x.png");
+    background-image: url("../img/bg-top@2x.png");
   }
 }
 
 .intro {
-  padding-left: 250px;
+  padding-left: 115px;
   padding-top: 166px;
   padding-bottom: 125px;
+  background-image: url("../img/top-pic@1x.png");
+  background-repeat: no-repeat;
+  background-position: 895px -44%;
+  background-size: 713px 655px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/top-pic@2x.png");
+  }
 }
 
 .intro b {
@@ -127,6 +130,7 @@
     padding-top: 66px;
     padding-right: 25px;
     padding-bottom: 163px;
+    background-image: none;
   }
 
   .intro b {
@@ -167,11 +171,11 @@
 @media (max-width: $mob-width) {
   .intro-header-wrapper {
     background-image: url("../img/top-pic-mob@1x.png"),
-    url("../img/bg-top@1x.png");
-    background-position: 26px 0,
-    -607px -9px;
+      url("../img/bg-top@1x.png");
+    background-position: right 0,
+      -607px -9px;
     background-size: 294px 437px,
-    cover;
+      cover;
   }
 
   .intro {

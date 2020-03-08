@@ -1,4 +1,16 @@
 .container {
-  max-width: 1400px;
+  max-width: 1650px;
   margin: 0 auto;
+}
+
+@media (max-width: $tab-width) {
+  .container {
+    max-width: 770px;
+  }
+}
+
+@media (max-width: $mob-width) {
+  .container {
+    max-width: 320px;
+  }
 }
