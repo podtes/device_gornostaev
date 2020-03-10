@@ -1,0 +1,272 @@
+.goods-services {
+  padding-top: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 97px;
+  background-color: #1b2d37;
+  color: #ffffff;
+}
+
+.goods-services__wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+  text-align: left;
+}
+
+.goods-services p {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff;
+}
+
+.goods-services h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: normal;
+  max-width: 170px;
+}
+
+.goods-services__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.goods-services__item {
+  position: relative;
+  padding-top: 50px;
+  padding-left: 44px;
+  width: 370px;
+  min-height: 620px;
+  box-sizing: border-box;
+
+  &--first {
+    background-image: url("../img/production@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  &--second {
+    background-image: url("../img/montage@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  &--third {
+    background-image: url("../img/parts@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/parts@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background-color: #00b2ff;
+    color: #ffffff;
+  }
+
+  &::after {
+    position: absolute;
+    content: ">";
+    bottom: 20px;
+    right: 24px;
+    font-size: 12px;
+    color: #ffffff;
+  }
+}
+
+.goods-services__list a {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-decoration: none;
+  display: block;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $tab-width) {
+  .goods-services {
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 79px;
+  }
+
+  .goods-services__wrapper {
+    max-width: 720px;
+  }
+
+  .goods-services__list {
+    flex-direction: column;
+  }
+
+  .goods-services p {
+    padding-right: 100px;
+    margin-bottom: 50px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .goods-services h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .goods-services__item {
+    padding-top: 39px;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 720px;
+    min-height: 256px;
+
+    &--first {
+      background-image: url("../img/production-tab@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 720px 256px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/production-tab@2x.png");
+        background-size: 720px 256px;
+      }
+    }
+
+    &--second {
+      background-image: url("../img/montage-tab@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 720px 256px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/montage-tab@2x.png");
+        background-size: 720px 256px;
+      }
+    }
+
+    &--third {
+      padding-top: 51px;
+      background-image: url("../img/parts-tab@1x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 720px 256px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/parts-tab@2x.png");
+        background-size: 720px 256px;
+      }
+    }
+  }
+
+  .goods-services__list a {
+    margin-right: 0;
+    margin-bottom: 45px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $mob-width) {
+  .goods-services {
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 64px;
+  }
+
+  .goods-services__wrapper {
+    max-width: 290px;
+  }
+
+  .goods-services p {
+    padding-right: 0;
+    padding-left: 10px;
+    margin-bottom: 42px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .goods-services__item {
+    padding-top: 20px;
+    padding-left: 35px;
+    width: 290px;
+    min-height: 256px;
+
+    &--first {
+      background-image: url("../img/production-mob@1x.png");
+      background-size: 290px 256px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/production-mob@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &--second {
+      background-image: url("../img/montage-mob@1x.png");
+      background-size: 290px 256px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/montage-mob@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &--third {
+      padding-top: 30px;
+      background-image: url("../img/parts-mob@1x.png");
+      background-size: 290px 256px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/parts-mob@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &::after {
+      bottom: 21px;
+      right: 28px;
+      font-size: 18px;
+    }
+  }
+
+  .goods-services__list a {
+    margin-bottom: 30px;
+  }
+}

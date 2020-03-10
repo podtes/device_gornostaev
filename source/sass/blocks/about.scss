@@ -1,6 +1,6 @@
 .about {
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 77px;
   background-color: transparent;
 }
 
@@ -75,6 +75,7 @@
 @media (max-width: $tab-width) {
   .about {
     padding-top: 31px;
+    padding-bottom: 73px;
   }
 
   .about__wrapper {
@@ -130,6 +131,7 @@
 @media (max-width: $mob-width) {
   .about {
     padding-top: 13px;
+    padding-bottom: 65px;
   }
 
   .about__wrapper {

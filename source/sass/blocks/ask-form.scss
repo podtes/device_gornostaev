@@ -1,0 +1,288 @@
+.ask-form {
+  padding-top: 72px;
+  padding-bottom: 114px;
+  background-color: #00b2ff;
+  color: #ffffff;
+
+  background-image: url("../img/callback-pic@1x.png");
+  background-repeat: no-repeat;
+  background-position: 14% -60px;
+  background-size: 686px 641px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/callback-pic@2x.png");
+    background-size: 686px 641px;
+  }
+}
+
+.ask-form__position-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ask-form__wrapper {
+  padding-right: 221px;
+  max-width: 570px;
+  background-color: #00b2ff;
+  border: 20px solid #00b2ff;
+}
+
+.ask-form b {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff;
+  display: block;
+}
+
+.ask-form p {
+  margin: 0;
+  margin-bottom: 51px;
+  padding: 0;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.ask-form__form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ask-form__name-tel-wrapper {
+  display: flex;
+}
+
+.ask-form__btn-checkbox-wrapper {
+  display: flex;
+}
+
+.ask-form__form-wrapper input[type="text"],
+.ask-form__form-wrapper input[type="tel"] {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  background-color: #19baff;
+  border: none;
+  min-width: 270px;
+  box-sizing: border-box;
+  color: #ffffff;
+
+  &::placeholder {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+}
+
+.ask-form__form-wrapper input[type="text"] {
+  margin-right: 30px;
+}
+
+.ask-form__form-wrapper textarea {
+  padding-top: 12px;
+  padding-left: 20px;
+  margin-bottom: 42px;
+  background-color: #19baff;
+  border: none;
+  box-sizing: border-box;
+  color: #ffffff;
+
+  &::placeholder {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+}
+
+.ask-form__form-wrapper button[type="submit"] {
+  padding: 13px;
+  margin-right: 40px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  min-width: 270px;
+}
+
+.ask-form__form-wrapper span {
+  display: block;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.ask-form__form-wrapper label {
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 30px;
+  position: relative;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    left: 4px;
+    top: 12px;
+    width: 5px;
+    height: 4px;
+    border-radius: 1px;
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    transform: rotate(-45deg);
+  }
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label::after {
+  display: block;
+}
+
+@media (max-width: $tab-width) {
+  .ask-form {
+    padding-top: 80px;
+    padding-bottom: 104px;
+    background-image: none;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: none;
+    }
+  }
+
+  .ask-form b {
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .ask-form p {
+    margin-bottom: 54px;
+  }
+
+  .ask-form__position-wrapper {
+    display: block;
+  }
+
+  .ask-form__wrapper {
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 2px;
+    max-width: 590px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .ask-form__form-wrapper input[type="text"],
+  .ask-form__form-wrapper input[type="tel"] {
+    padding-top: 18px;
+    padding-bottom: 21px;
+    min-width: 282px;
+  }
+
+  .ask-form__form-wrapper textarea {
+    margin-bottom: 44px;
+    padding-bottom: 6px;
+  }
+
+  .ask-form__form-wrapper button[type="submit"] {
+    padding: 14px;
+    min-width: 281px;
+  }
+
+  .ask-form__form-wrapper label {
+    padding-left: 33px;
+  }
+}
+
+@media (max-width: $mob-width) {
+  .ask-form {
+    padding-top: 30px;
+    padding-bottom: 42px;
+  }
+
+  .ask-form b {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .ask-form p {
+    margin-bottom: 26px;
+  }
+
+  .ask-form__position-wrapper {
+    display: block;
+  }
+
+  .ask-form__wrapper {
+    padding-left: 0;
+    max-width: 290px;
+  }
+
+  .ask-form__name-tel-wrapper {
+    flex-direction: column;
+  }
+
+  .ask-form__btn-checkbox-wrapper {
+    flex-direction: column;
+  }
+
+  .ask-form__form-wrapper input[type="text"],
+  .ask-form__form-wrapper input[type="tel"] {
+    padding-left: 17px;
+    padding-bottom: 21px;
+    margin-bottom: 30px;
+    min-width: 290px;
+    margin-right: 0;
+  }
+
+  .ask-form__form-wrapper textarea {
+    padding-left: 17px;
+    margin-bottom: 30px;
+    max-height: 104px;
+  }
+
+  .ask-form__form-wrapper button[type="submit"] {
+    margin-right: 0;
+    margin-bottom: 23px;
+    min-width: 290px;
+  }
+}
