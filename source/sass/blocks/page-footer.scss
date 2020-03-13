@@ -1,0 +1,290 @@
+.page-footer {
+  padding-top: 65px;
+  background-color: #fafafa;
+  color: #000000;
+}
+
+.page-footer__border-wrapper {
+  border-top: 1px solid #dcdddc;
+}
+
+.page-footer__top-wrapper {
+  padding-left: 117px;
+  padding-right: 120px;
+  padding-bottom: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-footer__logo-social-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  margin-right: 20px;
+  margin-bottom: 53px;
+  display: flex;
+  align-items: center;
+  min-width: 202px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__logo-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo-img {
+  margin-right: 16px;
+}
+
+.page-footer__logo-wrapper span:first-child {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: #203c42;
+}
+
+.page-footer__logo-wrapper span:last-child {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #788891;
+}
+
+.page-footer__sections-office-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-footer__social-list li {
+  font-size: 0;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.page-footer__sections {
+  margin-bottom: 20px;
+  margin-right: 156px;
+}
+
+.page-footer__sections p {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1b2d37;
+}
+
+.page-footer__sections-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 100px;
+  min-width: 500px;
+}
+
+.page-footer__sections-list a {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #1b2d37;
+  opacity: 0.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page-footer__sections-list li {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__office p {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1b2d37;
+}
+
+.page-footer__office-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100px;
+}
+
+.page-footer__office-list li {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__office-list a {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #1b2d37;
+  opacity: 0.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page-footer__bottom-wrapper {
+  padding-left: 117px;
+  padding-right: 120px;
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-footer__bottom-wrapper p {
+  margin: 0;
+  margin-right: 25px;
+  padding: 0;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1b2d37;
+  opacity: 0.5;
+
+  //TODO: обязательно нужно все выставлять четко по макету?
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $tab-width) {
+  .page-footer {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  .page-footer__top-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 16px;
+  }
+
+  .page-footer__logo-social-wrapper {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 0;
+    margin-bottom: 24px;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .page-footer__social-list {
+    padding-top: 10px;
+  }
+
+  .page-footer__social-list li {
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .page-footer__sections-office-wrapper {
+    padding-top: 38px;
+    padding-left: 25px;
+    padding-right: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid #dcdddc;
+  }
+
+  .page-footer__sections-list {
+    flex-direction: column;
+    max-height: none;
+    min-width: auto;
+  }
+
+  .page-footer__bottom-wrapper {
+    padding-top: 21px;
+    padding-left: 27px;
+    padding-right: 26px;
+  }
+
+  .page-footer__bottom-wrapper p {
+    margin-right: 0;
+  }
+
+  .page-footer__all-rights {
+    display: none;
+  }
+
+  .page-footer__years {
+    position: absolute;
+    top: 36px;
+    left: 42.6%;
+  }
+}

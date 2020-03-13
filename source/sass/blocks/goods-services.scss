@@ -9,11 +9,13 @@
 
 .goods-services__wrapper {
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   max-width: 1170px;
-  text-align: left;
+  justify-content: center;
 }
 
-.goods-services p {
+.goods-services h2 {
   margin: 0;
   margin-bottom: 50px;
   padding: 0;
@@ -22,9 +24,10 @@
   font-size: 36px;
   line-height: 51px;
   color: #ffffff;
+  width: 100%;
 }
 
-.goods-services h3 {
+.goods-services p {
   margin: 0;
   padding: 0;
   font-size: 20px;
@@ -34,14 +37,6 @@
   max-width: 170px;
 }
 
-.goods-services__list {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .goods-services__item {
   position: relative;
   padding-top: 50px;
@@ -49,8 +44,17 @@
   width: 370px;
   min-height: 620px;
   box-sizing: border-box;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-decoration: none;
+  display: block;
 
-  &--first {
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--production {
     background-image: url("../img/production@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -62,7 +66,7 @@
     }
   }
 
-  &--second {
+  &--montage {
     background-image: url("../img/montage@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -74,7 +78,7 @@
     }
   }
 
-  &--third {
+  &--parts {
     background-image: url("../img/parts@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -107,18 +111,6 @@
   }
 }
 
-.goods-services__list a {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  text-decoration: none;
-  display: block;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
-
 @media (max-width: $tab-width) {
   .goods-services {
     padding-top: 50px;
@@ -128,33 +120,34 @@
   }
 
   .goods-services__wrapper {
+    flex-direction: column;
     max-width: 720px;
   }
 
-  .goods-services__list {
-    flex-direction: column;
-  }
-
-  .goods-services p {
+  .goods-services h2 {
     padding-right: 100px;
     margin-bottom: 50px;
     font-size: 32px;
     line-height: 45px;
   }
 
-  .goods-services h3 {
+  .goods-services p {
     font-size: 20px;
     line-height: 30px;
   }
 
   .goods-services__item {
     padding-top: 39px;
-    margin-bottom: 0;
     margin-right: 0;
     width: 720px;
     min-height: 256px;
+    margin-bottom: 45px;
 
-    &--first {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--production {
       background-image: url("../img/production-tab@1x.png");
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -166,7 +159,7 @@
       }
     }
 
-    &--second {
+    &--montage {
       background-image: url("../img/montage-tab@1x.png");
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -178,7 +171,7 @@
       }
     }
 
-    &--third {
+    &--parts {
       padding-top: 51px;
       background-image: url("../img/parts-tab@1x.png");
       background-repeat: no-repeat;
@@ -189,15 +182,6 @@
         background-image: url("../img/parts-tab@2x.png");
         background-size: 720px 256px;
       }
-    }
-  }
-
-  .goods-services__list a {
-    margin-right: 0;
-    margin-bottom: 45px;
-
-    &:last-of-type {
-      margin-bottom: 0;
     }
   }
 }
@@ -214,7 +198,7 @@
     max-width: 290px;
   }
 
-  .goods-services p {
+  .goods-services h2 {
     padding-right: 0;
     padding-left: 10px;
     margin-bottom: 42px;
@@ -225,10 +209,11 @@
   .goods-services__item {
     padding-top: 20px;
     padding-left: 35px;
+    margin-bottom: 30px;
     width: 290px;
     min-height: 256px;
 
-    &--first {
+    &--production {
       background-image: url("../img/production-mob@1x.png");
       background-size: 290px 256px;
 
@@ -238,7 +223,7 @@
       }
     }
 
-    &--second {
+    &--montage {
       background-image: url("../img/montage-mob@1x.png");
       background-size: 290px 256px;
 
@@ -248,7 +233,7 @@
       }
     }
 
-    &--third {
+    &--parts {
       padding-top: 30px;
       background-image: url("../img/parts-mob@1x.png");
       background-size: 290px 256px;
@@ -264,9 +249,5 @@
       right: 28px;
       font-size: 18px;
     }
-  }
-
-  .goods-services__list a {
-    margin-bottom: 30px;
   }
 }

@@ -25,60 +25,58 @@
           </div>
         </a>
         <div class="page-header__wrapper">
-          <ul class="page-header__list">
-            <li>
-              <a class="page-header__mail" href="mailto:info@sd.ru">
-                <span>info@sd.ru</span>
-              </a>
-            </li>
-            <li>
-              <a class="page-header__phone" href="tel:+7(495)0005252">
-                <span>+7 (495) 000 52 52</span>
-              </a>
-            </li>
-          </ul>
+          <div class="page-header__list">
+            <a class="page-header__mail" href="mailto:info@sd.ru">
+              <span>info@sd.ru</span>
+            </a>
+            <a class="page-header__phone" href="tel:+7(495)0005252">
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </div>
           <button type="button">заказать звонок</button>
         </div>
       </header>
       <div class="intro">
         <h1 class="visually-hidden">Smart Device - компания по производству и монтажу плат и комплектующих</h1>
-        <b>Печатные платы</b>
-        <h2>производство и монтаж, поставка комплектующих, блоков и модулей</h2>
-        <a class="intro__button" href="#">
-          <span>Получить бесплатную консультацию</span>
-          <span>Бесплатная консультация</span>
-        </a>
-        <a class="intro__scroll-link" href="#">Скролл вниз</a>
+        <div class="intro__wrapper">
+          <b>Печатные платы</b>
+          <h2>производство и монтаж, поставка комплектующих, блоков и модулей</h2>
+          <a class="intro__button" href="#">
+            <span>Получить бесплатную консультацию</span>
+            <span>Бесплатная консультация</span>
+          </a>
+          <a class="intro__scroll-link" href="#">Скролл вниз</a>
+        </div>
       </div>
     </div>
   </div>
   <main>
     <div class="advantages-about-bg-wrapper">
-      <section class="advantages container">
+      <section class="advantages">
       <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--first">
+        <li class="advantages__item advantages__item--deadlines">
           <svg class="advantages__icon-watch" width="29" height="35">
             <use xlink:href="./img/sprite_auto.svg#icon-watch"></use>
           </svg>
           <h3>Оперативные сроки</h3>
           <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
         </li>
-        <li class="advantages__item advantages__item--second">
+        <li class="advantages__item advantages__item--suppliers">
           <svg class="advantages__icon-hired" width="35" height="35">
             <use xlink:href="./img/sprite_auto.svg#icon-hired"></use>
           </svg>
           <h3>Крупные поставщики</h3>
           <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
         </li>
-        <li class="advantages__item advantages__item--third">
+        <li class="advantages__item advantages__item--confidentiality">
           <svg class="advantages__icon-detective" width="36" height="31">
             <use xlink:href="./img/sprite_auto.svg#icon-detective"></use>
           </svg>
           <h3>Полная конфиденциальность</h3>
           <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
         </li>
-        <li class="advantages__item advantages__item--fourth">
+        <li class="advantages__item advantages__item--cost">
           <svg class="advantages__icon-tag" width="35" height="35">
             <use xlink:href="./img/sprite_auto.svg#icon-tag"></use>
           </svg>
@@ -97,35 +95,23 @@
     </section>
     </div>
     <section class="goods-services">
-      <div class="container">
-        <h2 class="visually-hidden">Товары и услуги, предоставляемые компанией Smart Device</h2>
-        <div class="goods-services__wrapper">
-          <p>Service Device предлагает следующие товары и услуги</p>
-          <div class="goods-services__list">
-            <a href="#">
-              <div class="goods-services__item goods-services__item--first">
-                <h3>Производство печатных плат</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="goods-services__item goods-services__item--second">
-                <h3>Монтаж печатных плат</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="goods-services__item goods-services__item--third">
-                <h3>Комплектующие для светотехники</h3>
-              </div>
-            </a>
-          </div>
-        </div>
+      <div class="goods-services__wrapper">
+        <h2>Service Device предлагает следующие товары и услуги</h2>
+        <a href="#" class="goods-services__item goods-services__item--production">
+          <p>Производство печатных плат</p>
+        </a>
+        <a href="#" class="goods-services__item goods-services__item--montage">
+          <p>Монтаж печатных плат</p>
+        </a>
+        <a href="#" class="goods-services__item goods-services__item--parts">
+          <p>Комплектующие для светотехники</p>
+        </a>
       </div>
     </section>
     <section class="ask-form">
       <div class="ask-form__position-wrapper container">
         <div class="ask-form__wrapper">
-          <h2 class="visually-hidden">Форма оформления заявки для обратной связи</h2>
-          <b>Остались вопросы? Задайте их нам!</b>
+          <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="#">
             <div class="ask-form__form-wrapper">
@@ -149,5 +135,120 @@
       </div>
     </section>
   </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__top-wrapper">
+        <div class="page-footer__logo-social-wrapper">
+          <a href="#" class="page-footer__logo">
+            <img src="./img/logo-header-desktop@1x.png" srcset="./img/logo-header-desktop@2x.png 2x" alt="логотоп компании Smart Device" class="page-header__logo-img" width="52" height="52">
+            <div class="page-footer__logo-wrapper">
+              <span>Service Device</span>
+              <span>умные технологии</span>
+            </div>
+          </a>
+          <ul class="page-footer__social-list">
+            <li>
+              <a href="#">Наш фейсбук
+                <svg class="page-footer__icon-facebook" width="27" height="27">
+                  <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">Одноклассники
+                <svg class="page-footer__icon-ok" width="27" height="27">
+                  <use xlink:href="./img/sprite_auto.svg#icon-ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">Наш Вк
+                <svg class="page-footer__icon-vk" width="27" height="27">
+                  <use xlink:href="./img/sprite_auto.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__sections-office-wrapper">
+          <div class="page-footer__sections">
+          <p>Разделы сайта</p>
+          <ul class="page-footer__sections-list">
+            <li>
+              <a href="#">
+                О компании
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Продукты
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Производство печатных плат
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Монтаж печатных плат
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Комплектующие
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Доставка
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+          <div class="page-footer__office">
+          <p>Наш офис</p>
+          <ul class="page-footer__office-list">
+            <li>
+              <a href="#">
+                г. Мытищи, Олимпийский проспект, д.10
+              </a>
+            </li>
+            <li>
+              <a href="tel:+74955894050">
+                +7 (495) 589-40-50
+              </a>
+            </li>
+            <li>
+              <a href="tel:+79250038767">
+                +7 (925) 003-87-67
+              </a>
+            </li>
+            <li>
+              <a href="tel:+792692608079">
+                +7 (926) 926-080-79
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer__border-wrapper">
+      <div class="container">
+        <div class="page-footer__bottom-wrapper">
+          <p class="page-footer__all-rights">Все права защищены</p>
+          <p class="page-footer__years">1999-2018 SD Service Devices</p>
+          <p>Условия конфиденциальности</p>
+          <p>Developed by wow studio </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

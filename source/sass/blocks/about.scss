@@ -1,16 +1,15 @@
 .about {
-  padding-top: 50px;
-  padding-bottom: 77px;
   background-color: transparent;
 }
 
 .about__wrapper {
+  padding-top: 50px;
   padding-left: 420px;
   padding-right: 250px;
-  padding-bottom: 45px;
+  padding-bottom: 109px;
   background-image: url("../img/2005@1x.png");
   background-repeat: no-repeat;
-  background-position: 14.7% 4px;
+  background-position: 14.7% 54px;
   background-size: 220px 317px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -41,12 +40,12 @@
   letter-spacing: 0.001em;
 
   &:last-of-type {
-    margin-bottom: 50px;
+    margin-bottom: 39px;
   }
 }
 
 .about a {
-  padding: 14px 50px;
+  padding: 14px 56px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -57,6 +56,7 @@
   border: 1px solid #00b2ff;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block;
 
   &:hover {
     background-color: #00b2ff;
@@ -73,19 +73,14 @@
 }
 
 @media (max-width: $tab-width) {
-  .about {
-    padding-top: 31px;
-    padding-bottom: 73px;
-  }
-
   .about__wrapper {
-    padding: 0;
+    padding-top: 31px;
     padding-left: 210px;
     padding-right: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 83px;
     background-image: url("../img/2005-tab@1x.png");
     background-repeat: no-repeat;
-    background-position: 0 -2px;
+    background-position: 0 29px;
     background-size: 244px 362px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

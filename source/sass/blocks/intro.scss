@@ -25,6 +25,10 @@
   }
 }
 
+.intro__wrapper {
+  max-width: 750px;
+}
+
 .intro b {
   display: block;
   margin: 0;
@@ -131,6 +135,10 @@
     padding-right: 25px;
     padding-bottom: 163px;
     background-image: none;
+  }
+
+  .intro__wrapper {
+    max-width: 410px;
   }
 
   .intro b {
