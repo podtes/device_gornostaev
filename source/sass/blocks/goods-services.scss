@@ -125,10 +125,11 @@
   }
 
   .goods-services h2 {
-    padding-right: 100px;
+    padding-right: 0;
     margin-bottom: 50px;
     font-size: 32px;
     line-height: 45px;
+    max-width: 630px;
   }
 
   .goods-services p {

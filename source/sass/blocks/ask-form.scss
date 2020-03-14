@@ -6,12 +6,13 @@
 .ask-form__position-wrapper {
   padding-top: 72px;
   padding-bottom: 94px;
+  padding-right: 355px;
   display: flex;
   justify-content: flex-end;
 
   background-image: url("../img/callback-pic@1x.png");
   background-repeat: no-repeat;
-  background-position: 40px -60px;
+  background-position: 175px -60px;
   background-size: 686px 641px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -21,7 +22,6 @@
 }
 
 .ask-form__wrapper {
-  padding-right: 221px;
   max-width: 570px;
   background-color: #00b2ff;
   border: 20px solid #00b2ff;
@@ -50,28 +50,22 @@
   color: #ffffff;
 }
 
-.ask-form__form-wrapper {
+.ask-form form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.ask-form__name-tel-wrapper {
-  display: flex;
-}
-
-.ask-form__btn-checkbox-wrapper {
-  display: flex;
-}
-
-.ask-form__form-wrapper input[type="text"],
-.ask-form__form-wrapper input[type="tel"] {
+.ask-form input[type="text"],
+.ask-form input[type="tel"] {
   padding-top: 15px;
   padding-bottom: 20px;
   padding-left: 20px;
   margin-bottom: 40px;
   background-color: #19baff;
   border: none;
-  min-width: 270px;
+  width: 100%;
   box-sizing: border-box;
   color: #ffffff;
 
@@ -84,11 +78,11 @@
   }
 }
 
-.ask-form__form-wrapper input[type="text"] {
-  margin-right: 30px;
+.ask-form label {
+  width: calc(50% - 15px);
 }
 
-.ask-form__form-wrapper textarea {
+.ask-form textarea {
   padding-top: 12px;
   padding-left: 20px;
   margin-bottom: 42px;
@@ -96,6 +90,8 @@
   border: none;
   box-sizing: border-box;
   color: #ffffff;
+  width: 100%;
+  resize: none;
 
   &::placeholder {
     font-family: "PT Mono", "Arial", sans-serif;
@@ -106,14 +102,13 @@
   }
 }
 
-.ask-form__form-wrapper button[type="submit"] {
+.ask-form button[type="submit"] {
   padding: 13px;
-  margin-right: 40px;
   border-radius: 5px;
   border: 1px solid #ffffff;
   background-color: transparent;
   cursor: pointer;
-  min-width: 270px;
+  width: calc(50% - 15px);
 
   &:hover {
     opacity: 0.8;
@@ -124,7 +119,7 @@
   }
 }
 
-.ask-form__form-wrapper span {
+.ask-form span {
   display: block;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
@@ -135,7 +130,7 @@
   color: #ffffff;
 }
 
-.ask-form__form-wrapper label {
+.ask-form .ask-form__checkbox-label {
   display: inline-block;
   padding-top: 8px;
   padding-left: 30px;
@@ -147,6 +142,7 @@
   color: #ffffff;
   opacity: 0.8;
   cursor: pointer;
+  width: calc(50% - 53px);
 
   &:hover {
     opacity: 0.7;
@@ -182,14 +178,18 @@
   }
 }
 
-input[type="checkbox"]:checked,
+.ask-form input[type="checkbox"]:checked,
 input[type="checkbox"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
 
-input[type="checkbox"]:checked + label::after {
+.ask-form input[type="checkbox"]:checked + .ask-form__checkbox-label::after {
   display: block;
+}
+
+.ask-form input[type="checkbox"]:focus + .ask-form__checkbox-label::before {
+  outline: 3px solid goldenrod;
 }
 
 @media (max-width: $tab-width) {
@@ -204,6 +204,7 @@ input[type="checkbox"]:checked + label::after {
   }
 
   .ask-form__position-wrapper {
+    padding-right: 0;
     padding-top: 80px;
     padding-bottom: 104px;
     display: block;
@@ -223,25 +224,24 @@ input[type="checkbox"]:checked + label::after {
     border: none;
   }
 
-  .ask-form__form-wrapper input[type="text"],
-  .ask-form__form-wrapper input[type="tel"] {
+  .ask-form input[type="text"],
+  .ask-form input[type="tel"] {
     padding-top: 18px;
     padding-bottom: 21px;
-    min-width: 282px;
   }
 
-  .ask-form__form-wrapper textarea {
+  .ask-form textarea {
     margin-bottom: 44px;
     padding-bottom: 6px;
   }
 
-  .ask-form__form-wrapper button[type="submit"] {
+  .ask-form button[type="submit"] {
     padding: 14px;
-    min-width: 281px;
   }
 
-  .ask-form__form-wrapper label {
+  .ask-form .ask-form__checkbox-label {
     padding-left: 33px;
+    width: calc(50% - 59px);
   }
 }
 
@@ -257,6 +257,8 @@ input[type="checkbox"]:checked + label::after {
   }
 
   .ask-form__position-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 30px;
     padding-bottom: 42px;
     display: block;
@@ -264,35 +266,35 @@ input[type="checkbox"]:checked + label::after {
 
   .ask-form__wrapper {
     padding-left: 0;
-    max-width: 290px;
   }
 
-  .ask-form__name-tel-wrapper {
-    flex-direction: column;
+  .ask-form label {
+    width: 100%;
   }
 
-  .ask-form__btn-checkbox-wrapper {
-    flex-direction: column;
-  }
-
-  .ask-form__form-wrapper input[type="text"],
-  .ask-form__form-wrapper input[type="tel"] {
+  .ask-form input[type="text"],
+  .ask-form input[type="tel"] {
     padding-left: 17px;
     padding-bottom: 21px;
-    margin-bottom: 30px;
-    min-width: 290px;
+    margin-bottom: 28px;
+    min-width: auto;
     margin-right: 0;
   }
 
-  .ask-form__form-wrapper textarea {
+  .ask-form textarea {
     padding-left: 17px;
     margin-bottom: 30px;
     max-height: 104px;
   }
 
-  .ask-form__form-wrapper button[type="submit"] {
+  .ask-form button[type="submit"] {
     margin-right: 0;
     margin-bottom: 23px;
-    min-width: 290px;
+    width: 100%;
+  }
+
+  .ask-form .ask-form__checkbox-label {
+    padding-left: 33px;
+    width: 100%;
   }
 }

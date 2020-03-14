@@ -4,17 +4,20 @@
   color: #000000;
 }
 
-.page-footer__border-wrapper {
-  border-top: 1px solid #dcdddc;
+.page-footer__top-wrapper {
+  border-bottom: 1px solid #dcdddc;
 }
 
-.page-footer__top-wrapper {
-  padding-left: 117px;
-  padding-right: 120px;
+.page-footer__top-position-wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1475px;
+  margin: 0 auto;
   padding-bottom: 36px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .page-footer__logo-social-wrapper {
@@ -82,6 +85,14 @@
   font-size: 0;
   margin-right: 16px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .page-footer__sections {
@@ -89,7 +100,7 @@
   margin-right: 156px;
 }
 
-.page-footer__sections p {
+.page-footer__title--sections {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
@@ -102,7 +113,7 @@
   color: #1b2d37;
 }
 
-.page-footer__sections-list {
+.page-footer__list--sections {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -113,7 +124,7 @@
   min-width: 500px;
 }
 
-.page-footer__sections-list a {
+.page-footer__list--sections a {
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -124,7 +135,7 @@
   cursor: pointer;
 }
 
-.page-footer__sections-list li {
+.page-footer__list--sections li {
   cursor: pointer;
 
   &:hover {
@@ -136,7 +147,7 @@
   }
 }
 
-.page-footer__office p {
+.page-footer__title--office {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
@@ -149,7 +160,7 @@
   color: #1b2d37;
 }
 
-.page-footer__office-list {
+.page-footer__list--office {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -159,7 +170,7 @@
   max-height: 100px;
 }
 
-.page-footer__office-list li {
+.page-footer__list--office li {
   cursor: pointer;
 
   &:hover {
@@ -171,7 +182,7 @@
   }
 }
 
-.page-footer__office-list a {
+.page-footer__list--office a {
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -192,9 +203,6 @@
 }
 
 .page-footer__bottom-wrapper p {
-  margin: 0;
-  margin-right: 25px;
-  padding: 0;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: normal;
   font-size: 13px;
@@ -203,12 +211,29 @@
   text-transform: uppercase;
   color: #1b2d37;
   opacity: 0.5;
+}
 
-  //TODO: обязательно нужно все выставлять четко по макету?
+.page-footer__all-rights {
+  margin: 0;
+  padding: 0;
+  margin-right: 75px;
+}
 
-  &:last-of-type {
-    margin-right: 0;
-  }
+.page-footer__years {
+  margin: 0;
+  padding: 0;
+  margin-right: 141px;
+}
+
+.page-footer__nda {
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+}
+
+.page-footer__develop {
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: $tab-width) {
@@ -218,22 +243,23 @@
     padding-bottom: 24px;
   }
 
-  .page-footer__top-wrapper {
+  .page-footer__top-position-wrapper {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 16px;
+    max-width: none;
+    padding-bottom: 0;
   }
 
   .page-footer__logo-social-wrapper {
-    position: relative;
     padding-left: 25px;
-    padding-right: 25px;
-    margin-right: 0;
+    padding-right: 24px;
+    padding-bottom: 24px;
     margin-bottom: 24px;
     flex-direction: row;
     align-items: end;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid #dcdddc;
   }
 
   .page-footer__logo {
@@ -252,17 +278,22 @@
   }
 
   .page-footer__sections-office-wrapper {
-    padding-top: 38px;
+    padding-top: 14px;
     padding-left: 25px;
     padding-right: 36px;
+    padding-bottom: 36px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    border-top: 1px solid #dcdddc;
   }
 
-  .page-footer__sections-list {
+  .page-footer__sections {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .page-footer__list--sections {
     flex-direction: column;
     max-height: none;
     min-width: auto;
@@ -286,5 +317,120 @@
     position: absolute;
     top: 36px;
     left: 42.6%;
+  }
+}
+
+@media (max-width: $mob-width) {
+  .page-footer {
+    padding-bottom: 0;
+  }
+
+  .page-footer__logo-social-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 26px;
+    padding-bottom: 43px;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+
+  .page-footer__logo {
+    margin: 0 auto;
+    margin-bottom: 81px;
+  }
+
+  .page-footer__social-list {
+    padding-top: 0;
+    margin: 0 auto;
+  }
+
+  .page-footer__years {
+    top: 123px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .page-footer__sections-office-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-footer__sections {
+    padding-top: 29px;
+    padding-left: 15px;
+    padding-bottom: 2px;
+    padding-right: 20px;
+    width: 100%;
+    border-bottom: 1px solid #dcdddc;
+  }
+
+  .page-footer__title--sections {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    max-width: 285px;
+  }
+
+  .page-footer__list--sections {
+    max-width: 285px;
+    margin: 0 auto;
+    display: none;
+  }
+
+  .page-footer__office {
+    padding-top: 28px;
+    padding-left: 15px;
+    padding-bottom: 2px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  .page-footer__title--office {
+    margin: 0 auto;
+    margin-bottom: 32px;
+    max-width: 285px;
+    tab-index: 0;
+  }
+
+  .page-footer__list--office {
+    margin: 0 auto;
+    max-height: none;
+    max-width: 285px;
+    display: none;
+  }
+
+  .page-footer__list--active {
+    display: block;
+  }
+
+  .page-footer__title {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -3px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/minus.svg") no-repeat 50% 50%;
+    }
+  }
+
+  .page-footer__title--active::after {
+    background: url("../img/plus.svg") no-repeat 50% 50%;
+  }
+
+  .page-footer__bottom-wrapper {
+    max-width: 285px;
+    margin: 0 auto;
+    padding-top: 27px;
+    padding-bottom: 26px;
+    justify-content: center;
+  }
+
+  .page-footer__nda {
+    margin-bottom: 21px;
   }
 }

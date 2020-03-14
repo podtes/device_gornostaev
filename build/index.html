@@ -7,11 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device - печатные платы</title>
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font">
-  <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font">
-  <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font">
-  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font">
-  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
   <div class="intro-header-wrapper">
@@ -33,7 +33,7 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </div>
-          <button type="button">заказать звонок</button>
+          <button class="page-header__callback-button" type="button">заказать звонок</button>
         </div>
       </header>
       <div class="intro">
@@ -114,106 +114,90 @@
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="#">
-            <div class="ask-form__form-wrapper">
-              <div class="ask-form__name-tel-wrapper">
-                <input type="text" name="name" placeholder="Имя">
-                <input type="tel" name="telephone" placeholder="Телефон">
-              </div>
-              <textarea name="question" cols="10" rows="11" placeholder="Ваш вопрос"></textarea>
-              <div class="ask-form__btn-checkbox-wrapper">
-                <button type="submit">
-                  <span>Задать вопрос</span>
-                </button>
-                <input type="checkbox" name="agreement" id="agree">
-                <label for="agree">
-                  Я согласен на обработку  персональных данных
-                </label>
-              </div>
-            </div>
+            <label aria-label="Имя">
+              <input type="text" name="name" placeholder="Имя">
+            </label>
+            <label aria-label="Телефон">
+              <input type="tel" name="telephone" placeholder="Телефон">
+            </label>
+            <textarea name="question" cols="10" rows="11" placeholder="Ваш вопрос"></textarea>
+            <button type="submit">
+              <span>Задать вопрос</span>
+            </button>
+            <input type="checkbox" name="agreement" id="agree">
+            <label for="agree" class="ask-form__checkbox-label">
+              Я согласен на обработку  персональных данных
+            </label>
           </form>
         </div>
       </div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="container">
-      <div class="page-footer__top-wrapper">
+    <div class="page-footer__top-wrapper">
+      <div class="page-footer__top-position-wrapper">
         <div class="page-footer__logo-social-wrapper">
-          <a href="#" class="page-footer__logo">
-            <img src="./img/logo-header-desktop@1x.png" srcset="./img/logo-header-desktop@2x.png 2x" alt="логотоп компании Smart Device" class="page-header__logo-img" width="52" height="52">
-            <div class="page-footer__logo-wrapper">
-              <span>Service Device</span>
-              <span>умные технологии</span>
-            </div>
-          </a>
-          <ul class="page-footer__social-list">
-            <li>
-              <a href="#">Наш фейсбук
-                <svg class="page-footer__icon-facebook" width="27" height="27">
-                  <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">Одноклассники
-                <svg class="page-footer__icon-ok" width="27" height="27">
-                  <use xlink:href="./img/sprite_auto.svg#icon-ok"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">Наш Вк
-                <svg class="page-footer__icon-vk" width="27" height="27">
-                  <use xlink:href="./img/sprite_auto.svg#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a href="#" class="page-footer__logo">
+          <img src="./img/logo-header-desktop@1x.png" srcset="./img/logo-header-desktop@2x.png 2x" alt="логотоп компании Smart Device" class="page-footer__logo-img" width="52" height="52">
+          <div class="page-footer__logo-wrapper">
+            <span>Service Device</span>
+            <span>умные технологии</span>
+          </div>
+        </a>
+        <ul class="page-footer__social-list">
+          <li>
+            <a href="#">Наш фейсбук
+              <svg class="page-footer__icon-facebook" width="27" height="27">
+                <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">Одноклассники
+              <svg class="page-footer__icon-ok" width="27" height="27">
+                <use xlink:href="./img/sprite_auto.svg#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">Наш Вк
+              <svg class="page-footer__icon-vk" width="27" height="27">
+                <use xlink:href="./img/sprite_auto.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
         <div class="page-footer__sections-office-wrapper">
-          <div class="page-footer__sections">
-          <p>Разделы сайта</p>
-          <ul class="page-footer__sections-list">
+        <div class="page-footer__sections">
+          <h3 class="page-footer__title page-footer__title--sections" tabindex="0">Разделы сайта</h3>
+          <ul class="page-footer__list page-footer__list--sections">
             <li>
-              <a href="#">
-                О компании
-              </a>
+              <a href="#">О компании</a>
             </li>
             <li>
-              <a href="#">
-                Продукты
-              </a>
+              <a href="#">Продукты</a>
             </li>
             <li>
-              <a href="#">
-                Производство печатных плат
-              </a>
+              <a href="#">Производство печатных плат</a>
             </li>
             <li>
-              <a href="#">
-                Монтаж печатных плат
-              </a>
+              <a href="#">Монтаж печатных плат</a>
             </li>
             <li>
-              <a href="#">
-                Комплектующие
-              </a>
+              <a href="#">Комплектующие</a>
             </li>
             <li>
-              <a href="#">
-                Доставка
-              </a>
+              <a href="#">Доставка</a>
             </li>
             <li>
-              <a href="#">
-                Контакты
-              </a>
+              <a href="#">Контакты</a>
             </li>
           </ul>
         </div>
-          <div class="page-footer__office">
-          <p>Наш офис</p>
-          <ul class="page-footer__office-list">
+        <div class="page-footer__office">
+          <h3 class="page-footer__title page-footer__title--office page-footer__title--active" tabindex="0">Наш офис</h3>
+          <ul class="page-footer__list page-footer__list--office page-footer__list--active">
             <li>
               <a href="#">
                 г. Мытищи, Олимпийский проспект, д.10
@@ -236,19 +220,40 @@
             </li>
           </ul>
         </div>
-        </div>
+      </div>
       </div>
     </div>
-    <div class="page-footer__border-wrapper">
-      <div class="container">
-        <div class="page-footer__bottom-wrapper">
-          <p class="page-footer__all-rights">Все права защищены</p>
-          <p class="page-footer__years">1999-2018 SD Service Devices</p>
-          <p>Условия конфиденциальности</p>
-          <p>Developed by wow studio </p>
-        </div>
-      </div>
+    <div class="page-footer__bottom-wrapper">
+      <p class="page-footer__all-rights">Все права защищены</p>
+      <p class="page-footer__years">1999-2018 SD Service Devices</p>
+      <p class="page-footer__nda">Условия конфиденциальности</p>
+      <p class="page-footer__develop">Developed by wow studio </p>
     </div>
   </footer>
+  <div class="modal-position">
+    <section class="modal-order-callback">
+      <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
+      <p class="modal-order-callback__title">Закажите звонок</p>
+      <p class="modal-order-callback__message">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form autocomplete="off">
+        <label aria-label="Имя">
+          <input type="text" name="name" placeholder="Имя">
+        </label>
+        <label aria-label="Телефон">
+          <input type="tel" name="telephone" placeholder="Телефон">
+        </label>
+        <textarea name="question" cols="10" rows="7" placeholder="Ваш вопрос"></textarea>
+        <button type="submit">
+          <span>Отправить</span>
+        </button>
+        <input type="checkbox" name="agreement" id="agree-modal">
+        <label for="agree-modal" class="modal-order-callback__checkbox-label">
+          Я согласен на обработку  персональных данных
+        </label>
+      </form>
+      <button type="button" class="modal-order-callback__close-button"></button>
+    </section>
+  </div>
+  <script src="./js/app.js"></script>
 </body>
 </html>
