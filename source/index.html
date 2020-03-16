@@ -17,7 +17,7 @@
   <div class="intro-header-wrapper">
     <div class="container">
       <header class="page-header">
-        <a href="#" class="page-header__logo">
+        <a class="page-header__logo">
           <img src="./img/logo-header-desktop@1x.png" srcset="./img/logo-header-desktop@2x.png 2x" alt="логотоп компании Smart Device" class="page-header__logo-img" width="52" height="52">
           <div class="page-header__logo-wrapper">
             <span>Smart Device</span>
@@ -41,18 +41,18 @@
         <div class="intro__wrapper">
           <b>Печатные платы</b>
           <h2>производство и монтаж, поставка комплектующих, блоков и модулей</h2>
-          <a class="intro__button" href="#">
+          <a class="intro__button" href="#ask-form-section">
             <span>Получить бесплатную консультацию</span>
             <span>Бесплатная консультация</span>
           </a>
-          <a class="intro__scroll-link" href="#">Скролл вниз</a>
+          <a class="intro__scroll-link" href="#advantages-section">Скролл вниз</a>
         </div>
       </div>
     </div>
   </div>
   <main>
     <div class="advantages-about-bg-wrapper">
-      <section class="advantages">
+      <section class="advantages" id="advantages-section">
       <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--deadlines">
@@ -108,23 +108,23 @@
         </a>
       </div>
     </section>
-    <section class="ask-form">
+    <section class="ask-form" id="ask-form-section">
       <div class="ask-form__position-wrapper container">
         <div class="ask-form__wrapper">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="#">
             <label aria-label="Имя">
-              <input type="text" name="name" placeholder="Имя">
+              <input type="text" name="name" placeholder="Имя" required>
             </label>
             <label aria-label="Телефон">
-              <input type="tel" name="telephone" placeholder="Телефон">
+              <input id="ask-form__phone-input" type="tel" name="telephone" placeholder="Телефон" required>
             </label>
-            <textarea name="question" cols="10" rows="11" placeholder="Ваш вопрос"></textarea>
+            <textarea name="question" cols="10" rows="6" placeholder="Ваш вопрос"></textarea>
             <button type="submit">
               <span>Задать вопрос</span>
             </button>
-            <input type="checkbox" name="agreement" id="agree">
+            <input type="checkbox" name="agreement" id="agree" required>
             <label for="agree" class="ask-form__checkbox-label">
               Я согласен на обработку  персональных данных
             </label>
@@ -137,7 +137,7 @@
     <div class="page-footer__top-wrapper">
       <div class="page-footer__top-position-wrapper">
         <div class="page-footer__logo-social-wrapper">
-        <a href="#" class="page-footer__logo">
+        <a class="page-footer__logo">
           <img src="./img/logo-header-desktop@1x.png" srcset="./img/logo-header-desktop@2x.png 2x" alt="логотоп компании Smart Device" class="page-footer__logo-img" width="52" height="52">
           <div class="page-footer__logo-wrapper">
             <span>Service Device</span>
@@ -237,16 +237,16 @@
       <p class="modal-order-callback__message">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form autocomplete="off">
         <label aria-label="Имя">
-          <input type="text" name="name" placeholder="Имя">
+          <input id="modal-name-input" type="text" name="name" placeholder="Имя" required>
         </label>
         <label aria-label="Телефон">
-          <input type="tel" name="telephone" placeholder="Телефон">
+          <input id="modal-phone-input" type="tel" name="telephone" placeholder="Телефон" required>
         </label>
         <textarea name="question" cols="10" rows="7" placeholder="Ваш вопрос"></textarea>
         <button type="submit">
           <span>Отправить</span>
         </button>
-        <input type="checkbox" name="agreement" id="agree-modal">
+        <input type="checkbox" name="agreement" id="agree-modal" required>
         <label for="agree-modal" class="modal-order-callback__checkbox-label">
           Я согласен на обработку  персональных данных
         </label>
@@ -254,6 +254,8 @@
       <button type="button" class="modal-order-callback__close-button"></button>
     </section>
   </div>
+  <script src="https://cdn.jsdelivr.net/modernizr/3.3.1/modernizr.min.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./js/vendor.js"></script>
 </body>
 </html>

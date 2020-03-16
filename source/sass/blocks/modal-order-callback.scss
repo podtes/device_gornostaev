@@ -44,21 +44,22 @@
 
 .modal-order-callback input[type="text"],
 .modal-order-callback input[type="tel"] {
-  padding-top: 18px;
-  padding-bottom: 21px;
-  padding-left: 24px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 17px;
   margin-bottom: 30px;
   background-color: #19baff;
   border: none;
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 
   &::placeholder {
-    font-family: "PT Mono", "Arial", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
     color: #ffffff;
   }
 }
@@ -69,7 +70,7 @@
 
 .modal-order-callback textarea {
   padding-top: 12px;
-  padding-left: 24px;
+  padding-left: 18px;
   margin-bottom: 29px;
   background-color: #19baff;
   border: none;
@@ -77,12 +78,13 @@
   color: #ffffff;
   width: 100%;
   resize: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 
   &::placeholder {
-    font-family: "PT Mono", "Arial", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
     color: #ffffff;
   }
 }
@@ -95,6 +97,7 @@
   background-color: transparent;
   cursor: pointer;
   width: 100%;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     opacity: 0.8;

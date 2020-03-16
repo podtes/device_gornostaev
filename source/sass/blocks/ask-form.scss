@@ -9,7 +9,9 @@
   padding-right: 355px;
   display: flex;
   justify-content: flex-end;
+}
 
+.no-webp .ask-form__position-wrapper {
   background-image: url("../img/callback-pic@1x.png");
   background-repeat: no-repeat;
   background-position: 175px -60px;
@@ -17,6 +19,18 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/callback-pic@2x.png");
+    background-size: 686px 641px;
+  }
+}
+
+.webp .ask-form__position-wrapper {
+  background-image: url("../img/callback-pic@1x.webp");
+  background-repeat: no-repeat;
+  background-position: 175px -60px;
+  background-size: 686px 641px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/callback-pic@2x.webp");
     background-size: 686px 641px;
   }
 }
@@ -59,21 +73,22 @@
 
 .ask-form input[type="text"],
 .ask-form input[type="tel"] {
-  padding-top: 15px;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 17px;
   margin-bottom: 40px;
   background-color: #19baff;
   border: none;
   width: 100%;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   color: #ffffff;
 
   &::placeholder {
-    font-family: "PT Mono", "Arial", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
     color: #ffffff;
   }
 }
@@ -84,7 +99,8 @@
 
 .ask-form textarea {
   padding-top: 12px;
-  padding-left: 20px;
+  padding-left: 18px;
+  padding-bottom: 11px;
   margin-bottom: 42px;
   background-color: #19baff;
   border: none;
@@ -92,12 +108,13 @@
   color: #ffffff;
   width: 100%;
   resize: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 
   &::placeholder {
-    font-family: "PT Mono", "Arial", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
     color: #ffffff;
   }
 }
@@ -109,6 +126,7 @@
   background-color: transparent;
   cursor: pointer;
   width: calc(50% - 15px);
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     opacity: 0.8;
@@ -201,6 +219,7 @@ input[type="checkbox"]:not(:checked) {
 
   .ask-form p {
     margin-bottom: 54px;
+    padding-left: 3px;
   }
 
   .ask-form__position-wrapper {
@@ -218,21 +237,25 @@ input[type="checkbox"]:not(:checked) {
   .ask-form__wrapper {
     margin: 0 auto;
     padding-right: 0;
-    padding-left: 2px;
+    padding-left: 0;
     max-width: 590px;
     background-color: transparent;
     border: none;
   }
 
+  .ask-form form {
+    padding-left: 2px;
+  }
+
   .ask-form input[type="text"],
   .ask-form input[type="tel"] {
-    padding-top: 18px;
-    padding-bottom: 21px;
+    padding-top: 12px;
+    padding-bottom: 18px;
   }
 
   .ask-form textarea {
     margin-bottom: 44px;
-    padding-bottom: 6px;
+    padding-bottom: 17px;
   }
 
   .ask-form button[type="submit"] {
@@ -240,8 +263,18 @@ input[type="checkbox"]:not(:checked) {
   }
 
   .ask-form .ask-form__checkbox-label {
-    padding-left: 33px;
+    padding-left: 35px;
+    padding-top: 4px;
     width: calc(50% - 59px);
+
+    &::before {
+      top: 5px;
+    }
+
+    &::after {
+      top: 8px;
+      left: 4px;
+    }
   }
 }
 
@@ -253,6 +286,7 @@ input[type="checkbox"]:not(:checked) {
   }
 
   .ask-form p {
+    padding-left: 0;
     margin-bottom: 26px;
   }
 
@@ -275,8 +309,8 @@ input[type="checkbox"]:not(:checked) {
   .ask-form input[type="text"],
   .ask-form input[type="tel"] {
     padding-left: 17px;
-    padding-bottom: 21px;
-    margin-bottom: 28px;
+    padding-bottom: 19px;
+    margin-bottom: 29px;
     min-width: auto;
     margin-right: 0;
   }
@@ -289,7 +323,7 @@ input[type="checkbox"]:not(:checked) {
 
   .ask-form button[type="submit"] {
     margin-right: 0;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
     width: 100%;
   }
 

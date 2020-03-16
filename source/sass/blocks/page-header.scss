@@ -153,6 +153,7 @@
     padding-bottom: 50px;
     padding-left: 25px;
     padding-right: 25px;
+    align-items: center;
   }
 
   .page-header__logo {
@@ -161,10 +162,12 @@
   }
 
   .page-header__wrapper {
+    padding-top: 0;
     width: auto;
   }
 
   .page-header__list {
+    padding-top: 0;
     margin-bottom: 0;
     transform: translateY(-2px);
   }

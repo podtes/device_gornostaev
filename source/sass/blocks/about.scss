@@ -7,6 +7,9 @@
   padding-left: 420px;
   padding-right: 250px;
   padding-bottom: 109px;
+}
+
+.no-webp .about__wrapper {
   background-image: url("../img/2005@1x.png");
   background-repeat: no-repeat;
   background-position: 14.7% 54px;
@@ -14,6 +17,17 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/2005@2x.png");
+  }
+}
+
+.webp .about__wrapper {
+  background-image: url("../img/2005@1x.webp");
+  background-repeat: no-repeat;
+  background-position: 14.7% 54px;
+  background-size: 220px 317px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/2005@2x.webp");
   }
 }
 
@@ -78,6 +92,9 @@
     padding-left: 210px;
     padding-right: 25px;
     padding-bottom: 83px;
+  }
+
+  .no-webp .about__wrapper {
     background-image: url("../img/2005-tab@1x.png");
     background-repeat: no-repeat;
     background-position: 0 29px;
@@ -85,6 +102,17 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/2005-tab@2x.png");
+    }
+  }
+
+  .webp .about__wrapper {
+    background-image: url("../img/2005-tab@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 29px;
+    background-size: 244px 362px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/2005-tab@2x.webp");
     }
   }
 
@@ -133,7 +161,22 @@
     padding: 0;
     padding-left: 14px;
     padding-right: 5px;
-    background: none;
+  }
+
+  .no-webp .about__wrapper {
+    background-image: none;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: none;
+    }
+  }
+
+  .webp .about__wrapper {
+    background-image: none;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: none;
+    }
   }
 
   .about__title {

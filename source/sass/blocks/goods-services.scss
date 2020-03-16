@@ -54,42 +54,6 @@
     margin-right: 0;
   }
 
-  &--production {
-    background-image: url("../img/production@1x.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 370px 620px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/production@2x.png");
-      background-size: 370px 620px;
-    }
-  }
-
-  &--montage {
-    background-image: url("../img/montage@1x.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 370px 620px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/montage@2x.png");
-      background-size: 370px 620px;
-    }
-  }
-
-  &--parts {
-    background-image: url("../img/parts@1x.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 370px 620px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/parts@2x.png");
-      background-size: 370px 620px;
-    }
-  }
-
   &::before {
     position: absolute;
     content: "";
@@ -108,6 +72,78 @@
     right: 24px;
     font-size: 12px;
     color: #ffffff;
+  }
+}
+
+.no-webp .goods-services__item--production {
+  background-image: url("../img/production@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px 620px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/production@2x.png");
+    background-size: 370px 620px;
+  }
+}
+
+.webp .goods-services__item--production {
+  background-image: url("../img/production@1x.webp");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px 620px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/production@2x.webp");
+    background-size: 370px 620px;
+  }
+}
+
+.no-webp .goods-services__item--montage {
+  background-image: url("../img/montage@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px 620px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/montage@2x.png");
+    background-size: 370px 620px;
+  }
+}
+
+.webp .goods-services__item--montage {
+  background-image: url("../img/montage@1x.webp");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px 620px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/montage@2x.webp");
+    background-size: 370px 620px;
+  }
+}
+
+.no-webp .goods-services__item--parts {
+  background-image: url("../img/parts@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px 620px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/parts@2x.png");
+    background-size: 370px 620px;
+  }
+}
+
+.webp .goods-services__item--parts {
+  background-image: url("../img/parts@1x.webp");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px 620px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/parts@2x.webp");
+    background-size: 370px 620px;
   }
 }
 
@@ -147,42 +183,77 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
 
-    &--production {
-      background-image: url("../img/production-tab@1x.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 720px 256px;
+  .no-webp .goods-services__item--production {
+    background-image: url("../img/production-tab@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/production-tab@2x.png");
-        background-size: 720px 256px;
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-tab@2x.png");
+      background-size: 370px 620px;
     }
+  }
 
-    &--montage {
-      background-image: url("../img/montage-tab@1x.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 720px 256px;
+  .webp .goods-services__item--production {
+    background-image: url("../img/production-tab@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/montage-tab@2x.png");
-        background-size: 720px 256px;
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-tab@2x.webp");
+      background-size: 370px 620px;
     }
+  }
 
-    &--parts {
-      padding-top: 51px;
-      background-image: url("../img/parts-tab@1x.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 720px 256px;
+  .no-webp .goods-services__item--montage {
+    background-image: url("../img/montage-tab@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/parts-tab@2x.png");
-        background-size: 720px 256px;
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage-tab@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  .webp .goods-services__item--montage {
+    background-image: url("../img/montage-tab@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage-tab@2x.webp");
+      background-size: 370px 620px;
+    }
+  }
+
+  .no-webp .goods-services__item--parts {
+    background-image: url("../img/parts-tab@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/parts-tab@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  .webp .goods-services__item--parts {
+    background-image: url("../img/parts-tab@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/parts-tab@2x.webp");
+      background-size: 370px 620px;
     }
   }
 }
@@ -214,41 +285,82 @@
     width: 290px;
     min-height: 256px;
 
-    &--production {
-      background-image: url("../img/production-mob@1x.png");
-      background-size: 290px 256px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/production-mob@2x.png");
-        background-size: 290px 256px;
-      }
-    }
-
-    &--montage {
-      background-image: url("../img/montage-mob@1x.png");
-      background-size: 290px 256px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/montage-mob@2x.png");
-        background-size: 290px 256px;
-      }
-    }
-
-    &--parts {
-      padding-top: 30px;
-      background-image: url("../img/parts-mob@1x.png");
-      background-size: 290px 256px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/parts-mob@2x.png");
-        background-size: 290px 256px;
-      }
-    }
-
     &::after {
       bottom: 21px;
       right: 28px;
       font-size: 18px;
+    }
+  }
+
+  .no-webp .goods-services__item--production {
+    background-image: url("../img/production-mob@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-mob@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  .webp .goods-services__item--production {
+    background-image: url("../img/production-mob@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-mob@2x.webp");
+      background-size: 370px 620px;
+    }
+  }
+
+  .no-webp .goods-services__item--montage {
+    background-image: url("../img/montage-mob@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage-mob@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  .webp .goods-services__item--montage {
+    background-image: url("../img/montage-mob@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage-mob@2x.webp");
+      background-size: 370px 620px;
+    }
+  }
+
+  .no-webp .goods-services__item--parts {
+    background-image: url("../img/parts-mob@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/parts-mob@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  .webp .goods-services__item--parts {
+    background-image: url("../img/parts-mob@1x.webp");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 370px 620px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/parts-mob@2x.webp");
+      background-size: 370px 620px;
     }
   }
 }

@@ -10,7 +10,11 @@ var callbackModal = overlay.querySelector('.modal-order-callback');
 var callbackCloseButton = overlay.querySelector('.modal-order-callback__close-button');
 var pageFooterTitles = document.querySelectorAll('.page-footer__title');
 var pageFooterLists = document.querySelectorAll('.page-footer__list');
+var phoneInputAskForm = document.querySelector('#ask-form__phone-input');
+var phoneInputModal = document.querySelector('#modal-phone-input');
+var nameInputModal = document.querySelector('#modal-name-input');
 
+// логика открытия и закрытия модального окна формы обратной связи
 var openCallbackModal = function () {
   if (callbackModal) {
     overlay.classList.add('modal-open');
@@ -18,6 +22,7 @@ var openCallbackModal = function () {
     document.addEventListener('keydown', openCallbackModalPressEscHandler);
     overlay.addEventListener('click', overlayClickHandler);
     body.classList.add('fix-body');
+    nameInputModal.focus();
   }
 };
 var closeCallbackModal = function () {
@@ -68,17 +73,11 @@ var overlayClickHandler = function (evt) {
   }
 };
 
-
-callbackOpenButton.addEventListener('click', callbackOpenButtonClickHandler);
-callbackCloseButton.addEventListener('click', callbackCloseButtonClickHandler);
-callbackOpenButton.addEventListener('keydown', callbackOpenButtonPressEnterHandler);
-callbackCloseButton.addEventListener('keydown', callbackCloseButtonPressEnterHandler);
-
-
 var getWindowWidth = function () {
   return window.innerWidth || document.body.clientWidth;
 };
 
+// аккордеон в футере
 var removeFooterTitlesAndListsActiveClass = function () {
   if (pageFooterTitles && pageFooterLists) {
     for (var i = 0; i < pageFooterTitles.length; i++) {
@@ -93,7 +92,6 @@ var removeFooterTitlesAndListsActiveClass = function () {
     }
   }
 };
-
 var footerTitlesClickHandler = function (evt) {
   if (pageFooterTitles) {
     if (evt.currentTarget.classList.contains('page-footer__title--active')) {
@@ -105,7 +103,6 @@ var footerTitlesClickHandler = function (evt) {
     }
   }
 };
-
 var footerTitlesPressEnterHandler = function (evt) {
   if (pageFooterTitles) {
     if (evt.keyCode === ENTER_KEYCODE) {
@@ -119,7 +116,6 @@ var footerTitlesPressEnterHandler = function (evt) {
     }
   }
 };
-
 var switchFooterTitlesAndLists = function () {
   if (getWindowWidth() < 768) {
     if (pageFooterTitles) {
@@ -131,6 +127,45 @@ var switchFooterTitlesAndLists = function () {
   }
 };
 
+// валидация полей ввода
+var validatePhoneInputHandler = function (field) {
+  if (field) {
+    if (field.value.length > 4 && field.value.length < 17) {
+      field.setCustomValidity('Неверный формат!');
+    } else if (field.value.length <= 3 && field.value.length >= 1) {
+      field.setCustomValidity('Введите номер телефона!');
+    } else {
+      field.setCustomValidity('');
+    }
+  }
+};
+
+// валидация инпута в модальном окне
+phoneInputModal.addEventListener('change', function () {
+  validatePhoneInputHandler(phoneInputModal);
+});
+phoneInputModal.addEventListener('focus', function () {
+  validatePhoneInputHandler(phoneInputModal);
+});
+phoneInputModal.addEventListener('blur', function () {
+  validatePhoneInputHandler(phoneInputModal);
+});
+
+// валидация инпута в секции c формой
+phoneInputAskForm.addEventListener('change', function () {
+  validatePhoneInputHandler(phoneInputAskForm);
+});
+phoneInputAskForm.addEventListener('focus', function () {
+  validatePhoneInputHandler(phoneInputAskForm);
+});
+phoneInputAskForm.addEventListener('blur', function () {
+  validatePhoneInputHandler(phoneInputAskForm);
+});
+
+
+callbackOpenButton.addEventListener('click', callbackOpenButtonClickHandler);
+callbackCloseButton.addEventListener('click', callbackCloseButtonClickHandler);
+callbackOpenButton.addEventListener('keydown', callbackOpenButtonPressEnterHandler);
+callbackCloseButton.addEventListener('keydown', callbackCloseButtonPressEnterHandler);
+
 switchFooterTitlesAndLists();
-
-
