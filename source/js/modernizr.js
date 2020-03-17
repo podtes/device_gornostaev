@@ -1,6 +1,6 @@
 'use strict';
 
-/*!
+/* !
  * modernizr v3.6.0
  * Build https://modernizr.com/download?-webp-webpalpha-webplossless_webp_lossless-setclasses-dontmin
  *
@@ -24,10 +24,8 @@
  * of control over the experience.
 */
 
-;(function(window, document, undefined){
+(function (window, document) {
   var classes = [];
-
-
   var tests = [];
 
 
@@ -56,7 +54,7 @@
     _q: [],
 
     // Stub these for people who are listening
-    on: function(test, cb) {
+    on: function (test, cb) {
       // I don't really think people should do this, but we can
       // safe guard it a bit.
       // -- NOTE:: this gets WAY overridden in src/addTest for actual async tests.
@@ -64,30 +62,28 @@
       // but the code to *disallow* sync tests in the real version of this
       // function is actually larger than this.
       var self = this;
-      setTimeout(function() {
+      setTimeout(function () {
         cb(self[test]);
       }, 0);
     },
 
-    addTest: function(name, fn, options) {
+    addTest: function (name, fn, options) {
       tests.push({name: name, fn: fn, options: options});
     },
 
-    addAsyncTest: function(fn) {
+    addAsyncTest: function (fn) {
       tests.push({name: null, fn: fn});
     }
   };
 
 
-
   // Fake some of Object.create so we can force non test results to be non "own" properties.
-  var Modernizr = function() {};
+  var Modernizr = function () {};
   Modernizr.prototype = ModernizrProto;
 
   // Leak modernizr globally when you `require` it rather than force it here.
   // Overwrite name so constructor name is nicer :D
   Modernizr = new Modernizr();
-
 
 
   /**
@@ -103,7 +99,6 @@
   function is(obj, type) {
     return typeof obj === type;
   }
-  ;
 
   /**
    * Run through all tests and detect their support in the current UA.
@@ -173,7 +168,6 @@
       }
     }
   }
-  ;
 
   /**
    * docElement is a convenience wrapper to grab the root element of the document
@@ -232,8 +226,6 @@
 
   }
 
-  ;
-
   /**
    * hasOwnProp is a shim for hasOwnProperty that is needed for Safari 2.0 support
    *
@@ -245,28 +237,24 @@
    * @returns {boolean}
    */
 
-    // hasOwnProperty shim by kangax needed for Safari 2.0 support
+  // hasOwnProperty shim by kangax needed for Safari 2.0 support
   var hasOwnProp;
 
-  (function() {
+  (function () {
     var _hasOwnProperty = ({}).hasOwnProperty;
     /* istanbul ignore else */
     /* we have no way of testing IE 5.5 or safari 2,
      * so just assume the else gets hit */
     if (!is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined')) {
-      hasOwnProp = function(object, property) {
+      hasOwnProp = function (object, property) {
         return _hasOwnProperty.call(object, property);
       };
-    }
-    else {
-      hasOwnProp = function(object, property) { /* yes, this can give false positives/negatives, but most of the time we don't care about those */
+    } else {
+      hasOwnProp = function (object, property) { /* yes, this can give false positives/negatives, but most of the time we don't care about those */
         return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
       };
     }
   })();
-
-
-
 
   // _l tracks listeners for async tests, as well as tests that execute after the initial run
   ModernizrProto._l = {};
@@ -295,7 +283,7 @@
    * ```
    */
 
-  ModernizrProto.on = function(feature, cb) {
+  ModernizrProto.on = function (feature, cb) {
     // Create the list of listeners if it doesn't exist
     if (!this._l[feature]) {
       this._l[feature] = [];
@@ -307,7 +295,7 @@
     // If it's already been resolved, trigger it on next tick
     if (Modernizr.hasOwnProperty(feature)) {
       // Next Tick
-      setTimeout(function() {
+      setTimeout(function () {
         Modernizr._trigger(feature, Modernizr[feature]);
       }, 0);
     }
@@ -326,7 +314,7 @@
    * result of a feature detection function
    */
 
-  ModernizrProto._trigger = function(feature, res) {
+  ModernizrProto._trigger = function (feature, res) {
     if (!this._l[feature]) {
       return;
     }
@@ -334,8 +322,9 @@
     var cbs = this._l[feature];
 
     // Force async
-    setTimeout(function() {
-      var i, cb;
+    setTimeout(function () {
+      var i;
+      var cb;
       for (i = 0; i < cbs.length; i++) {
         cb = cbs[i];
         cb(res);
@@ -417,10 +406,10 @@
 
   function addTest(feature, test) {
 
-    if (typeof feature == 'object') {
+    if (typeof feature === 'object') {
       for (var key in feature) {
         if (hasOwnProp(feature, key)) {
-          addTest(key, feature[ key ]);
+          addTest(key, feature[key]);
         }
       }
     } else {
@@ -430,11 +419,11 @@
       var last = Modernizr[featureNameSplit[0]];
 
       // Again, we don't check for parent test existence. Get that right, though.
-      if (featureNameSplit.length == 2) {
+      if (featureNameSplit.length === 2) {
         last = last[featureNameSplit[1]];
       }
 
-      if (typeof last != 'undefined') {
+      if (typeof last !== 'undefined') {
         // we're going to quit if you're trying to overwrite an existing test
         // if we were to allow it, we'd do this:
         //   var re = new RegExp("\\b(no-)?" + feature + "\\b");
@@ -443,10 +432,10 @@
         return Modernizr;
       }
 
-      test = typeof test == 'function' ? test() : test;
+      test = typeof test === 'function' ? test() : test;
 
       // Set the value (this is the magic, right here).
-      if (featureNameSplit.length == 1) {
+      if (featureNameSplit.length === 1) {
         Modernizr[featureNameSplit[0]] = test;
       } else {
         // cast to a Boolean, if not one already
@@ -458,7 +447,7 @@
       }
 
       // Set a single class (either `feature` or `no-feature`)
-      setClasses([(!!test && test != false ? '' : 'no-') + featureNameSplit.join('-')]);
+      setClasses([(!!test && test !== false ? '' : 'no-') + featureNameSplit.join('-')]);
 
       // Trigger the event
       Modernizr._trigger(feature, test);
@@ -468,13 +457,11 @@
   }
 
   // After all the tests are run, add self to the Modernizr prototype
-  Modernizr._q.push(function() {
+  Modernizr._q.push(function () {
     ModernizrProto.addTest = addTest;
   });
 
-
-
-  /*!
+  /* !
   {
     "name": "Webp Lossless",
     "async": true,
@@ -494,21 +481,21 @@
   Tests for non-alpha lossless webp support.
   */
 
-  Modernizr.addAsyncTest(function() {
+  Modernizr.addAsyncTest(function () {
     var image = new Image();
 
-    image.onerror = function() {
+    image.onerror = function () {
       addTest('webplossless', false, {aliases: ['webp-lossless']});
     };
 
-    image.onload = function() {
-      addTest('webplossless', image.width == 1, {aliases: ['webp-lossless']});
+    image.onload = function () {
+      addTest('webplossless', image.width === 1, {aliases: ['webp-lossless']});
     };
 
     image.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
   });
 
-  /*!
+  /* !
   {
     "name": "Webp",
     "async": true,
@@ -547,7 +534,7 @@
   */
 
 
-  Modernizr.addAsyncTest(function() {
+  Modernizr.addAsyncTest(function () {
 
     var webpTests = [{
       'uri': 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
@@ -572,7 +559,7 @@
         // if the event is from 'onload', check the see if the image's width is
         // 1 pixel (which indiciates support). otherwise, it fails
 
-        var result = event && event.type === 'load' ? image.width == 1 : false;
+        var result = event && event.type === 'load' ? image.width === 1 : false;
         var baseTest = name === 'webp';
 
         // if it is the base test, and the result is false, just set a literal false
@@ -591,7 +578,7 @@
     }
 
     // test for webp support in general
-    test(webp.name, webp.uri, function(e) {
+    test(webp.name, webp.uri, function (e) {
       // if the webp test loaded, test everything else.
       if (e && e.type === 'load') {
         for (var i = 0; i < webpTests.length; i++) {
@@ -603,7 +590,7 @@
   });
 
 
-  /*!
+  /* !
   {
     "name": "Webp Alpha",
     "async": true,
@@ -627,15 +614,15 @@
   Tests for transparent webp support.
   */
 
-  Modernizr.addAsyncTest(function() {
+  Modernizr.addAsyncTest(function () {
     var image = new Image();
 
-    image.onerror = function() {
+    image.onerror = function () {
       addTest('webpalpha', false, {aliases: ['webp-alpha']});
     };
 
-    image.onload = function() {
-      addTest('webpalpha', image.width == 1, {aliases: ['webp-alpha']});
+    image.onload = function () {
+      addTest('webpalpha', image.width === 1, {aliases: ['webp-alpha']});
     };
 
     image.src = 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==';
@@ -658,8 +645,5 @@
 
   // Leak Modernizr namespace
   window.Modernizr = Modernizr;
-
-
-  ;
 
 })(window, document);
