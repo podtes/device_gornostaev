@@ -18,7 +18,7 @@ var del = require("del");
 var concat = require("gulp-concat");
 
 gulp.task("scripts", function () {
-  return gulp.src(["./source/js/modernizr.js", "./source/js/imask.js"])
+  return gulp.src(["./source/js/imask.js", "./node_modules/svgxuse/svgxuse.js"])
     .pipe(concat("vendor.js"))
     .pipe(gulp.dest("./build/js"));
 });
