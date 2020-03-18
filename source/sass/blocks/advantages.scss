@@ -39,6 +39,7 @@
 .advantages__list {
   margin: 0 auto;
   padding: 0;
+  padding-left: 30px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -61,10 +62,6 @@
   min-height: 299px;
   cursor: pointer;
   background-color: #ffffff;
-
-  &:nth-child(even) {
-    margin-right: 0;
-  }
 }
 
 

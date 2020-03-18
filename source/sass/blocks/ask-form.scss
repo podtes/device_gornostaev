@@ -8,16 +8,20 @@
   padding-bottom: 94px;
   display: flex;
   justify-content: flex-end;
-  background-image: url("../img/callback-pic@1x.png");
-  background-repeat: no-repeat;
-  background-position: left -60px;
-  background-size: 686px 641px;
+  background-image: url("../img/callback-plane@1x.png"),
+    url("../img/callback-arrows@1x.png");
+  background-repeat: no-repeat,
+    no-repeat;
+  background-position: 16.6% 161px,
+    left 94px;
+  background-size: 511px 288px,
+    632px 487px;
   max-width: 1570px;
   margin: 0 auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/callback-pic@2x.png");
-    background-size: 686px 641px;
+    background-image: url("../img/callback-arrows@2x.png");
+    background-size: 632px 487px;
   }
 }
 
@@ -104,6 +108,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  overflow: auto;
 
   &::placeholder {
     color: #ffffff;
@@ -199,6 +204,17 @@ input[type="checkbox"]:not(:checked) {
 
 .ask-form input[type="checkbox"]:focus + .ask-form__checkbox-label::before {
   outline: 3px solid goldenrod;
+}
+
+@media (max-width: 1470px) {
+  .ask-form__position-wrapper {
+    background-position: left 161px,
+    left 94px;
+  }
+
+  .ask-form__wrapper {
+    padding-right: 30px;
+  }
 }
 
 @media (max-width: $tab-width) {

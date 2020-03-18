@@ -13,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .goods-services h2 {
@@ -107,6 +107,12 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/parts@2x.png");
     background-size: 370px 620px;
+  }
+}
+
+@media (max-width: 1329px) {
+  .goods-services__wrapper {
+    max-width: 800px;
   }
 }
 
