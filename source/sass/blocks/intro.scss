@@ -1,9 +1,6 @@
 .intro-header-wrapper {
   background-color: #1c2a32;
   color: #ffffff;
-}
-
-.no-webp .intro-header-wrapper {
   background-image: url("../img/bg-top@1x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -14,24 +11,10 @@
   }
 }
 
-.webp .intro-header-wrapper {
-  background-image: url("../img/bg-top@1x.webp");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-top@2x.webp");
-  }
-}
-
 .intro {
   padding-left: 115px;
   padding-top: 166px;
   padding-bottom: 125px;
-}
-
-.no-webp .intro {
   background-image: url("../img/top-pic@1x.png");
   background-repeat: no-repeat;
   background-position: 895px -44%;
@@ -39,17 +22,6 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/top-pic@2x.png");
-  }
-}
-
-.webp .intro {
-  background-image: url("../img/top-pic@1x.webp");
-  background-repeat: no-repeat;
-  background-position: 895px -44%;
-  background-size: 713px 655px;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/top-pic@2x.webp");
   }
 }
 
@@ -148,18 +120,9 @@
 }
 
 @media (max-width: $tab-width) {
-  .no-webp .intro-header-wrapper {
+  .intro-header-wrapper {
     background-image: url("../img/top-pic-tab@1x.png"),
       url("../img/bg-top@1x.png");
-    background-position: 440px -4.3%,
-      -367px -2px;
-    background-size: 536px 475px,
-      cover;
-  }
-
-  .webp .intro-header-wrapper {
-    background-image: url("../img/top-pic-tab@1x.webp"),
-      url("../img/bg-top@1x.webp");
     background-position: 440px -4.3%,
       -367px -2px;
     background-size: 536px 475px,
@@ -214,18 +177,9 @@
 }
 
 @media (max-width: $mob-width) {
-  .no-webp .intro-header-wrapper {
+  .intro-header-wrapper {
     background-image: url("../img/top-pic-mob@1x.png"),
       url("../img/bg-top@1x.png");
-    background-position: right 0,
-      -607px -9px;
-    background-size: 294px 437px,
-      cover;
-  }
-
-  .webp .intro-header-wrapper {
-    background-image: url("../img/top-pic-mob@1x.webp"),
-      url("../img/bg-top@1x.webp");
     background-position: right 0,
       -607px -9px;
     background-size: 294px 437px,

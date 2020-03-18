@@ -6,16 +6,14 @@
 .ask-form__position-wrapper {
   padding-top: 72px;
   padding-bottom: 94px;
-  padding-right: 355px;
   display: flex;
   justify-content: flex-end;
-}
-
-.no-webp .ask-form__position-wrapper {
   background-image: url("../img/callback-pic@1x.png");
   background-repeat: no-repeat;
-  background-position: 175px -60px;
+  background-position: left -60px;
   background-size: 686px 641px;
+  max-width: 1570px;
+  margin: 0 auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/callback-pic@2x.png");
@@ -23,20 +21,9 @@
   }
 }
 
-.webp .ask-form__position-wrapper {
-  background-image: url("../img/callback-pic@1x.webp");
-  background-repeat: no-repeat;
-  background-position: 175px -60px;
-  background-size: 686px 641px;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/callback-pic@2x.webp");
-    background-size: 686px 641px;
-  }
-}
-
 .ask-form__wrapper {
-  max-width: 570px;
+  width: 570px;
+  padding-right: 181px;
   background-color: #00b2ff;
   border: 20px solid #00b2ff;
 }
@@ -97,11 +84,15 @@
   width: calc(50% - 15px);
 }
 
+.ask-form .ask-form__textarea-label {
+  width: 100%;
+}
+
 .ask-form textarea {
   padding-top: 12px;
   padding-left: 18px;
   padding-bottom: 11px;
-  margin-bottom: 42px;
+  margin-bottom: 36px;
   background-color: #19baff;
   border: none;
   box-sizing: border-box;
@@ -238,8 +229,7 @@ input[type="checkbox"]:not(:checked) {
     margin: 0 auto;
     padding-right: 0;
     padding-left: 0;
-    max-width: 590px;
-    background-color: transparent;
+    width: 590px;
     border: none;
   }
 
@@ -254,7 +244,7 @@ input[type="checkbox"]:not(:checked) {
   }
 
   .ask-form textarea {
-    margin-bottom: 44px;
+    margin-bottom: 38px;
     padding-bottom: 17px;
   }
 
@@ -299,6 +289,7 @@ input[type="checkbox"]:not(:checked) {
   }
 
   .ask-form__wrapper {
+    width: 100%;
     padding-left: 0;
   }
 
@@ -317,7 +308,7 @@ input[type="checkbox"]:not(:checked) {
 
   .ask-form textarea {
     padding-left: 17px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     max-height: 104px;
   }
 
