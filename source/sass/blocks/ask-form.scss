@@ -20,8 +20,10 @@
   margin: 0 auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/callback-arrows@2x.png");
-    background-size: 632px 487px;
+    background-image: url("../img/callback-plane@2x.png"),
+      url("../img/callback-arrows@2x.png");
+    background-size: 511px 288px,
+      632px 487px;
   }
 }
 
