@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-.modal-order-callback__title {
+.modal-order-callback p:first-of-type {
   margin: 0;
   margin-bottom: 12px;
   padding: 0;
@@ -23,7 +23,7 @@
   display: block;
 }
 
-.modal-order-callback__message {
+.modal-order-callback p:last-of-type {
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
@@ -58,9 +58,18 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  cursor: text;
 
   &::placeholder {
     color: #ffffff;
+  }
+
+  &:hover {
+    background-color: #00bfff;
+  }
+
+  &:focus {
+    background-color: #00bfff;
   }
 }
 
@@ -84,9 +93,18 @@
   font-size: 16px;
   line-height: 22px;
   overflow: hidden;
+  cursor: text;
 
   &::placeholder {
     color: #ffffff;
+  }
+
+  &:hover {
+    background-color: #00bfff;
+  }
+
+  &:focus {
+    background-color: #00bfff;
   }
 }
 
@@ -122,6 +140,7 @@
 
 .modal-order-callback .modal-order-callback__checkbox-label {
   display: inline-block;
+  vertical-align: middle;
   padding-top: 8px;
   padding-left: 49px;
   position: relative;
